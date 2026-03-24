@@ -78,6 +78,7 @@ JOIN CLIENTES C
 GROUP BY C.NOME;
 
 ✔️ Listagem de pedidos com informações do cliente
+SQL
 SELECT 
     P.ID AS PEDIDO_ID,
     C.NOME,
