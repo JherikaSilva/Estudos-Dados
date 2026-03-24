@@ -1,0 +1,19 @@
+--Total de vendas por cliente 
+SELECT
+	C.NOME,
+	SUM(P.VALOR) AS TOTAL_GASTO
+FROM PEDIDOS P
+JOIN CLIENTES C
+	ON P.CLIENTE_ID= C.ID
+GROUP BY C.NOME;
+
+--Listar todos os pedidos com nome do cliente
+
+SELECT
+	P.ID AS PEDIDO_ID,
+	C.NOME,
+	P.VALOR,
+	P.HORA
+FROM PEDIDOS P
+JOIN CLIENTES C
+	ON P.CLIENTE_ID= C.ID
